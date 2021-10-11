@@ -30,8 +30,11 @@ select count(distinct marque) from Article;
 select nom,prix from Article where marque like 'TopMark' order by prix asc;
 select nom from Article where quantite = 0;
 update Article set nom='monsavon' where quantite=23;
-affiche tout les articles avec 'brioche' dans leur nom;
+-- affiche tout les articles avec 'brioche' dans leur nom;
 update Article set code_barre=3005000000000 where prix=15.7;
 select code_barre from Article where categorie='hygiene';
 select nom from Article where prix>100;
 select nom from Article where categorie='droguerie' and nom like '%soude%';
+select nom from Article where code_barre like '306%';
+delete 
+-- affiche le nom, le prix et la quantité de l'article si il appartient à la catégorie alimentaire et qui contient "bisque" dans son nom
