@@ -25,8 +25,13 @@ INSERT INTO `Article` VALUES (3070000000002,'quincaillerie','perceuse',104,0,'Ba
 INSERT INTO `Article` VALUES (3080000000000,'droguerie','recurmagix',5.7,20,'TopMark');
 INSERT INTO `Article` VALUES (3080000000001,'droguerie','bic de soude',1.5,20,'TopMark');
 COMMIT;
-select nom,code_barre from Article;
-select distinct count(marque) from Article;
+select * from Article;
+select count(distinct marque) from Article;
 select nom,prix from Article where marque like 'TopMark' order by prix asc;
 select nom from Article where quantite = 0;
 update Article set nom='monsavon' where quantite=23;
+affiche tout les articles avec 'brioche' dans leur nom;
+update Article set code_barre=3005000000000 where prix=15.7;
+select code_barre from Article where categorie='hygiene';
+select nom from Article where prix>100;
+select nom from Article where categorie='droguerie' and nom like '%soude%';
