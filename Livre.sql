@@ -10,5 +10,10 @@ CREATE TABLE IF NOT EXISTS `Livre` (
 INSERT INTO `Livre` (NumEnreg,Titre,Auteur,Genre,Parution,Pages) VALUES (18,'De la guerre','Carl Von Clausewitz','Traité',1832,265),
  (134,'Le père Goriot','Honoré de Balzac','Littérature',1835,304),
  (461,'Le feu','Henri Barbusse','Littérature',1916,435),
- (547,'1984','Georges Orwell','SF',1949,280);
+ (547,'1984','Georges Orwell','SF',1949,280),
+ (548,'La peau de chagrin','Aunoray deuh balhsack','wtf',1842,295);
 COMMIT;
+
+select Titre,Parution from Livre order by Parution desc;
+
+die Rocket maschinegun
